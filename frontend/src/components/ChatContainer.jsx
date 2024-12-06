@@ -54,6 +54,7 @@ const ChatContainer = () => {
             className={`chat ${message.senderId === authUser._id ? "chat-end" : "chat-start"}`}
             ref={messageEndRef}
           >
+            <p>{console.log(authUser._id)}</p>
             <div className=" chat-image avatar">
               <div className="size-10 rounded-full border">
                 <img
@@ -71,7 +72,7 @@ const ChatContainer = () => {
                 {formatMessageTime(message.createdAt)}
               </time>
             </div>
-            <div className="chat-bubble flex flex-col">
+            <div className={`chat-bubble flex flex-col ${message.senderId === authUser._id ? "bg-primary text-primary-content" : "bg-base-200 text-base-content"} max-w-[80%] rounded-xl p-3 shadow-sm`}>
               {message.image && (
                 <img
                   src={message.image}
