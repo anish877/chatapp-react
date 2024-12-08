@@ -1,6 +1,14 @@
 import { MessageSquare } from "lucide-react";
+import { useEffect, useMemo } from "react";
+import { useChatStore } from "../../store/useChatStore";
 
 const NoChatSelected = () => {
+  const {subscribeToMessages,unsubscribeFromMessages,getUsers} = useChatStore()
+
+  useEffect(()=>{
+    subscribeToMessages()
+    return () => unsubscribeFromMessages();
+  },[subscribeToMessages])
   return (
     <div className="w-full flex flex-1 flex-col items-center justify-center p-16 bg-base-100/50">
       <div className="max-w-md text-center space-y-6">
