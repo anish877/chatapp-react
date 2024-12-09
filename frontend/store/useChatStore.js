@@ -3,6 +3,7 @@ import toast from "react-hot-toast";
 import { axiosInstance } from "../lib/axios";
 import { useAuthStore } from "./useAuthStore";
 import Notification from "../src/components/Notification";
+import React from "react";
 
 export const useChatStore = create((set, get) => ({
   messages: [],
@@ -53,7 +54,7 @@ export const useChatStore = create((set, get) => ({
       if (!isMessageSentFromSelectedUser || selectedUser===null) {
         const user = get().users.find(user=>{return user._id===newMessage.senderId})
         toast.custom((t) => (
-          <Notification t={t} user={user} newMessage={newMessage} />
+          React.createElement(Notification, { t, user, newMessage })
         ))        
         return
       };
