@@ -4,7 +4,7 @@
 
 ![Untitled design](https://github.com/user-attachments/assets/c8569b09-2ba9-4e35-b6f8-7acfdcdd3e03)
 
-**[Github](https://link-url-here.org](https://github.com/anish877/chatapp-react))** | **[Live Preview](https://chatapp-react-hwka.onrender.com/)**
+**[Github](https://github.com/anish877/chatapp-react)** | **[Live Preview](https://chatapp-react-hwka.onrender.com/)**
 
 Designed and built a realtime chatting app using React, Tailwind CSS, and Socket.io within a monorepo structure, enabling seamless communication. This application ensures secure and efficient messaging through robust backend and frontend integration.
 
